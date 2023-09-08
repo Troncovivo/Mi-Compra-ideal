@@ -1,0 +1,29 @@
+:root {
+    --azul-oscuro: #003366;
+    --verde-oliva: #556B2F;
+    --amarillo-mostaza: #FFDB58;
+  }
+  
+
+body {
+    background-color: var(--azul-oscuro);
+    color: white;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    color: var(--verde-oliva);
+  }
+  
+  .btn {
+    background-color: var(--amarillo-mostaza);
+    border-color: var(--amarillo-mostaza);
+  }
+
+  .navbar-brand img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+    transform: scale(1.2);
+    border-radius: 20%;
+  }
+  
