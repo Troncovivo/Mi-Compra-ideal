@@ -21,16 +21,18 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+            <div>
+                <button class=“dark-toggle”>Modo oscuro</button>
+            </div>
             <!-- menú con los enlaces-->
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#encabezado">Encabezado</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#propuesta">Propuesta de valor</a>
+                        <a class="nav-link" href="Blog/blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#prueba">Prueba social</a>
@@ -64,9 +66,71 @@
     
      <div class="container">
 
-        <!-- Productos populares -->
+       
+        <!-- Carrusel de imágenes -->
 
-        <section id="destacados">
+        <section id="carrusel">
+           
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- indicadores para cambiar de imagen -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Fin indicadores para cambiar de imagen -->
+                
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        
+                        <img src="https://picsum.photos/700/400?random" alt="Categoría 1" class="d-block w-100">
+                        
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Categoría 1</h5>
+                            <p>Descubre los mejores productos de la categoría 1</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="https://picsum.photos/700/400?random" alt="Categoría 2" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Categoría 2</h5>
+                            <p>Descubre los mejores productos de la categoría 2</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="https://picsum.photos/700/400?random" alt="Categoría 3" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Categoría 3</h5>
+                            <p>Descubre los mejores productos de la categoría 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- controles Slider -->
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+                
+                <!-- Fin controles Slider -->
+
+            </div>
+        </section>
+
+        <!-- Fin Carrusel de imágenes -->
+
+         <!-- Productos populares -->
+
+         <section id="destacados">
             <h2>Productos destacados</h2>
             
             <div class="row">
@@ -114,67 +178,6 @@
             </div>
         </section>
 
-        <!-- Carrusel de imágenes -->
-
-        <section id="carrusel">
-           
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <!-- indicadores para cambiar de imagen -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Fin indicadores para cambiar de imagen -->
-                
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        
-                        <img src="https://picsum.photos/700/400?random" alt="Categoría 1" class="d-block w-100">
-                        
-                        <div class="carousel-caption d-none d-md-block">
-                            <!-- El texto debe tener la clase text-dark o text-light según el contraste con la imagen -->
-                            <h5>Categoría 1</h5>
-                            <p>Descubre los mejores productos de la categoría 1</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/700/400?random" alt="Categoría 2" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Categoría 2</h5>
-                            <p>Descubre los mejores productos de la categoría 2</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/700/400?random" alt="Categoría 3" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Categoría 3</h5>
-                            <p>Descubre los mejores productos de la categoría 3</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- controles Slider -->
-
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                   
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
-                
-                <!-- Fin controles Slider -->
-
-            </div>
-        </section>
-
-        <!-- Fin Carrusel de imágenes -->
 
         <!-- formulario de correo electrónico -->
 
@@ -281,6 +284,7 @@
     </div>
     
     <!-- Bootstrap y sus dependencias -->
+    <section class="elementor">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     
