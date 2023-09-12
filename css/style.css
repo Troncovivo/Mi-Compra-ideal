@@ -2,6 +2,28 @@
     --azul-oscuro: #003366;
     --verde-oliva: #556B2F;
     --amarillo-mostaza: #FFDB58;
+    --navbar-bg-color: white;
+  --navbar-text-color: black;
+  --footer-bg-color: white;
+  --footer-text-color: black;
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+  }
+  
+  .dark-mode .navbar {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+  }
+    
+  
+  
+  
+  .footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
   }
   
 
@@ -26,12 +48,6 @@ body {
     transform: scale(1.2);
     border-radius: 20%;
   }
-  :root {
-    --azul-oscuro: #003366;
-    --verde-oliva: #556B2F;
-    --amarillo-mostaza: #FFDB58;
-  }
-  
 
 body {
     background-color: var(--azul-oscuro);
@@ -46,5 +62,4 @@ body {
     background-color: var(--amarillo-mostaza);
     border-color: var(--amarillo-mostaza);
   }
-
- 
+  
