@@ -1,45 +1,59 @@
 :root {
-    --azul-oscuro: #003366;
-    --verde-oliva: #556B2F;
-    --amarillo-mostaza: #FFDB58;
-    --navbar-bg-color: white;
+  --azul-oscuro: #003366;
+  --verde-oliva: #556B2F;
+  --amarillo-mostaza: #FFDB58;
+  --navbar-bg-color: white;
   --navbar-text-color: black;
   --footer-bg-color: white;
   --footer-text-color: black;
-  }
-  
-  .navbar {
-    background-color: var(--navbar-bg-color);
-    color: var(--navbar-text-color);
-  }
-  
-  .dark-mode .navbar {
-    background-color: var(--navbar-bg-color);
-    color: var(--navbar-text-color);
-  }
-    
-  
-  
-  
-  .footer {
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
-  }
-  
+  --background-color: white;
+  --text-color: black;
 
-body {
-    background-color: var(--azul-oscuro);
-    color: white;
-  }
-  
-  h1, h2, h3, h4, h5 {
-    color: var(--verde-oliva);
-  }
-  
-  .btn {
-    background-color: var(--amarillo-mostaza);
-    border-color: var(--amarillo-mostaza);
-  }
+  --color-fondo: white;
+  --color-texto: black;
+  --color-fondo-nav: white;
+  --color-texto-nav: black;
+  --color-fondo-footer: white;
+  --color-texto-footer: black;
+}
+body .bg-dark {
+  background-color: #343a40;
+}
+
+body.dark-mode nav.navbar {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+body.dark-mode .footer {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
+body.dark-mode {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
+body.dark-mode .card-body {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+  object-fit: cover;
+}
+
+.card-img-top {
+  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+}
 
   .navbar-brand img{
     height: 70px;
@@ -48,18 +62,3 @@ body {
     transform: scale(1.2);
     border-radius: 20%;
   }
-
-body {
-    background-color: var(--azul-oscuro);
-    color: white;
-  }
-  
-  h1, h2, h3, h4, h5 {
-    color: var(--verde-oliva);
-  }
-  
-  .btn {
-    background-color: var(--amarillo-mostaza);
-    border-color: var(--amarillo-mostaza);
-  }
-  

@@ -1,35 +1,58 @@
-function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-  const options = {
-    bottom: '32px', // distancia desde el borde inferior de la pantalla
-    right: '32px', // distancia desde el borde derecho de la pantalla
-    mixColor: '#fff', // color base para mezclar con el modo oscuro
-    backgroundColor: '#fff', // color de fondo de la página
-    buttonColorDark: '#100f2c', // color del botón en modo oscuro
-    buttonColorLight: '#fff', // color del botón en modo claro
-    saveInCookies: true, // guardar la preferencia del usuario en cookies
-    label: '🌓', // texto o emoji del botón
-    autoMatchOsTheme: true // adaptarse al tema preferido del sistema operativo
-  }
-  
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+// Utilizando jQuery para seleccionar el elemento y cambiar su contenido
+$(document).ready(function() {
 
-
-  function toggleDarkMode() {
-    let root = document.documentElement;
-    let darkMode = root.style.getPropertyValue("--bg-color") == "white";
-    if (darkMode) {
-      root.style.setProperty("--bg-color", "black");
-      root.style.setProperty("--text-color", "white");
-      root.classList.add("dark-mode"); // agregar la clase .dark-mode
-    } else {
-      root.style.setProperty("--bg-color", "white");
-      root.style.setProperty("--text-color", "black");
-      root.classList.remove("dark-mode"); // quitar la clase .dark-mode
-    }
-  }
-  
+  $(document).ready(function() {
     
+    var button = $('#darkModeButton');
+  
+    // Establecer las propiedades del botón
+    button.css({
+      'bottom': '64px',
+      'right': 'unset',
+      'left': '32px',
+      'transition': '0.5s'
+    });
+  });
+
+  // Función para guardar la preferencia de modo oscuro en una cookie
+  function getDarkModePreferenceFromCookie() {
+    var cookieValue = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('darkModePreference='));
+    
+    if (cookieValue) {
+      return cookieValue.split('=')[1] === 'true';
+    }
+    
+    return false;
+  } // Función para obtener la preferencia de modo oscuro desde una cookie
+  var darkModeEnabled = getDarkModePreferenceFromCookie();
+
+  if (darkModeEnabled) {
+    enableDarkMode();
+  }
+
+  // Alternar el modo oscuro al hacer clic en un botón
+  $('#darkModeButton').click(function() {
+    if (darkModeEnabled) {
+      disableDarkMode();
+      darkModeEnabled = false;
+    } else {
+      enableDarkMode();
+      darkModeEnabled = true;
+    }
+    saveDarkModePreferenceToCookie(darkModeEnabled); 
+  });
+
+  // Función para habilitar el modo oscuro
+  function enableDarkMode() {
+    $('body').addClass('dark-mode');
+  }
+
+  // Función para deshabilitar el modo oscuro
+  function disableDarkMode() {
+    $('body').removeClass('dark-mode');
+   
+  }
+
+});
