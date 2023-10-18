@@ -1,6 +1,6 @@
 // Utilizando jQuery para seleccionar el elemento y cambiar su contenido
 $(document).ready(function() {
-
+7
   $(document).ready(function() {
     
     var button = $('#darkModeButton');
@@ -56,3 +56,4 @@ $(document).ready(function() {
   }
 
 });
+

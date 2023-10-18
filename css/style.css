@@ -16,21 +16,25 @@
   --color-fondo-footer: white;
   --color-texto-footer: black;
 }
-body .bg-dark {
-  background-color: #343a40;
-}
+
+/* Modo Oscuro */
+
 
 body.dark-mode nav.navbar {
-  background-color: #343a40 !important;
-  color: white !important;
-}
-
-.dark-mode .navbar-nav .nav-link {
+  background-color: #2B59BD !important;
   color: white !important;
 }
 
 body.dark-mode .footer {
-  background-color: #343a40 !important;
+  background-color: #2B59BD !important;
+  color: white !important;
+}
+
+body .bg-dark {
+  background-color: #2B59BD;
+}
+
+.dark-mode .navbar-nav .nav-link {
   color: white !important;
 }
 
@@ -44,16 +48,42 @@ body.dark-mode .card-body {
   color: white !important;
 }
 
+/* Fin Modo Oscuro */
+
+/* Boton Modo Oscuro */
+
+
+.boton-blackmode:hover {
+  background-color: #333;
+}
+
+/* Fin Boton Modo Oscuro */
+
+/* Slider Img */
+
+.carousel-inner {
+  margin: 25px;
+}
 .carousel-item img {
   width: 100%;
   height: auto;
-  max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+  max-height: 400px; /* Ajusta la altura máxima */
   object-fit: cover;
 }
 
-.card-img-top {
-  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+.carousel-item {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.card-img-top {
+  max-height: 200px; /* Ajusta la altura máxima */
+}
+.col-md-3 .card img {
+  max-height: 200px; /* Ajusta la altura máxima */
+  object-fit: cover;
+}
+
+/* Fin Slider */
 
   .navbar-brand img{
     height: 70px;
@@ -62,3 +92,27 @@ body.dark-mode .card-body {
     transform: scale(1.2);
     border-radius: 20%;
   }
+
+  /* Footer */
+
+  .footer {
+    background-color: #b8b8c4;
+    padding-top: 25px;
+    padding: 10px;
+  }
+
+.col-md-3 .navbar-brand img {
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.footer .col-md-3 p {
+  margin-left: 15px;
+  text-align: justify;
+
+}
+
+
+  /* Fin Footer */
+
+  
